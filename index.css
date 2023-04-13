@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #121212;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 30vh;
+}
+
+#hero-img {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  object-fit: cover;
+  object-position: 0 60%;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  top: 100px;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  background-color: transparent;
+  color: white;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+#watchlist-btn {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  background-color: transparent;
+}
+
+#search-icon {
+  background-color: transparent;
+}
+
+#search-icon .fa {
+  font-size: 1.25rem;
+  color: white;
+  background-color: transparent;
+}
+
+#watchlist-icon:hover {
+  letter-spacing: 30%;
+  font-weight: 700;
+}
+
+.search-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.search-bar {
+  position: absolute;
+  display: flex;
+  width: 75%;
+  top: 27%;
+  background: #2e2e2f;
+
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+.search-bar input {
+  min-width: 175px;
+  display: flex;
+  border: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 9px 13px;
+  width: 100%;
+  border-radius: 6px;
+  text-indent: 40px;
+  font-weight: 400;
+  color: #a5a5a5;
+  background-color: #2e2e2f;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar .fa-search {
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  color: #a5a5a5;
+  background-color: #2e2e2f;
+}
+
+.search-bar button {
+  display: flex;
+  border: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 11px 9px 17px;
+  width: 120px;
+  background: #4b4b4b;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 5%;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.search-bar button:disabled {
+  color: #a5a5a5;
+  cursor: not-allowed;
+}
+
+.search-bar button:hover:not(:disabled) {
+  background-color: #a5a5a5;
+  color: white;
+}
+
+#content-wrapper {
+  height: 70vh;
+  background-image: url(assets/icons/movies.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  align-items: center;
+}
+
+#watchlist-content-wrapper {
+  height: 70vh;
+  background-image: url(assets/icons/movies.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  align-items: center;
+}
+
+@media (max-width: 396px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  #watchlist-btn {
+    font-size: 0.75rem;
+  }
+  #search-btn {
+    font-size: 0.5rem;
+  }
+
+  .search-bar {
+    scale: 75%;
+    width: 100%;
+  }
+}
+
+.movie-card {
+  display: flex;
+  align-items: center;
+  gap:20px;
+  color: white;
+  width: 80%;
+  height: fit-content;
+  border-bottom: 2px solid #4b4b4b;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.movie-poster {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap:10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.duration, .genre{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.add-watchlist > h5 {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.add-watchlist {
+  display: flex;
+  gap: 5px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+.add-watchlist:disabled {
+  color: #4b4b4b;
+  cursor: not-allowed;
+}
+
+.add-watchlist:hover:not(:disabled) {
+  font-weight: 600;
+}
+
+.description {
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.description > a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 600;
+  margin-block-end: 0;
+}
+
+.score {
+  display: flex;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  align-items: center;
+}
+
+.score-value {
+  margin-block-end: 0;
+}
+
+.fa-star {
+  color: #ffdd00;
+}
