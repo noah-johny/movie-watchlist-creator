@@ -40,7 +40,7 @@ if (searchInput) {
 
 function renderCards() {
   contentWrapper.innerHTML = "";
-  fetch(`https://www.omdbapi.com/?apikey=d09c5b1f&s=${movieTitle}`)
+  fetch(`http://www.omdbapi.com/?apikey=d09c5b1f&s=${movieTitle}`)
     .then((res) => res.json())
     .then((data) => {
       if (data.Response === "False") {
@@ -48,7 +48,7 @@ function renderCards() {
       }
       for (let i in data.Search) {
         fetch(
-          `https://www.omdbapi.com/?apikey=d09c5b1f&t=${data.Search[i].Title}`
+          `http://www.omdbapi.com/?apikey=d09c5b1f&t=${data.Search[i].Title}`
         )
           .then((res) => res.json())
           .then((movie) => {
@@ -71,7 +71,7 @@ function renderCards() {
                     <h5 class="duration">${movie.Runtime}</h5>
                     <h5 class="genre">${movie.Genre}</h5>
 
-                    <button id="addWatchlist" class="add-watchlist" onclick="add('${movie.Title}')">
+                    <button id="addWatchlist" class="add-watchlist" onclick="add('${movie.Title}'); disabled = true;">
                       + Watchlist
                     </button>
 
