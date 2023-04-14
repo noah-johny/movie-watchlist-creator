@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="index.css" />
     <title>Movie Watchlist Creator</title>
   </head>
-  <body>
+  <body id="wrapper">
     <div class="hero-wrapper">
       <img
         id="hero-img"
@@ -42,16 +42,15 @@
       />
 
       <div class="header">
-        <h1>My Watchlist</h1>
-        <a id="search-icon" href="index.html">
+        <h1 id="my-watchlist">My Watchlist</h1>
+        <a id="watchlist" class="toggle-btn" href="./index.html">
           <i class="fa fa-search"></i>
         </a>
       </div>
     </div>
 
-    <div id="watchlist-content-wrapper" class="w3-container"></div>
+    <div id="watchlist-content-wrapper"></div>
 
-    <script type="module" src="./watchlist.js"></script>
-    <script type="module" src="./index.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

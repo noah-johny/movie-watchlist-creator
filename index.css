@@ -38,7 +38,7 @@
   background-color: transparent;
 }
 
-#watchlist-btn {
+#home {
   text-decoration: none;
   text-align: center;
   font-size: 1rem;
@@ -48,11 +48,11 @@
   background-color: transparent;
 }
 
-#search-icon {
+.toggle-btn {
   background-color: transparent;
 }
 
-#search-icon .fa {
+.toggle-btn .fa {
   font-size: 1.25rem;
   color: white;
   background-color: transparent;
@@ -183,7 +183,7 @@
   border-bottom: 2px solid #4b4b4b;
   margin: 0 auto;
   padding-top: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .movie-poster {
