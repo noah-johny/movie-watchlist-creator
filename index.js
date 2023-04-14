@@ -40,7 +40,7 @@ if (searchInput) {
 
 function renderCards() {
   contentWrapper.innerHTML = "";
-  fetch(`http://www.omdbapi.com/?apikey=d09c5b1f&s=${movieTitle}`)
+  fetch(`https://www.omdbapi.com/?apikey=d09c5b1f&s=${movieTitle}`)
     .then((res) => res.json())
     .then((data) => {
       if (data.Response === "False") {
@@ -48,7 +48,7 @@ function renderCards() {
       }
       for (let i in data.Search) {
         fetch(
-          `http://www.omdbapi.com/?apikey=d09c5b1f&t=${data.Search[i].Title}`
+          `https://www.omdbapi.com/?apikey=d09c5b1f&t=${data.Search[i].Title}`
         )
           .then((res) => res.json())
           .then((movie) => {
